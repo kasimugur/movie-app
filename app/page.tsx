@@ -3,29 +3,26 @@ import { Movie } from '@/types';
 import { useEffect, useState } from 'react';
 import SearchBox from './components/SearchBox';
 import MovieCard from './components/MovieCard';
-
+import { searchMovies } from '@/lib/api';
 export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
 
-  useEffect(() => {
+  
 
-  }, [])
-  // API bağlantısı kurulana kadar UI testi için sahte arama fonksiyonu
-  const handleSearch = (query: string) => {
+  const handleSearch = async (query: string) => {
     setLoading(true);
     setHasSearched(true);
-
+    const results = await searchMovies(query);
+    console.log(results)
+    setMovies(results)
     setTimeout(() => {
-      setMovies([
-        { id: 1, title: `${query} Başlıyor`, poster_path: '', release_date: '2026-05-12', vote_average: 8.8 },
-        { id: 2, title: `${query} Geri Döndü`, poster_path: '', release_date: '2024-11-23', vote_average: 7.5 },
-        { id: 3, title: `${query} İntikam`, poster_path: '', release_date: '2022-02-14', vote_average: 9.2 },
-        { id: 4, title: `${query} Son Umut`, poster_path: '', release_date: '2025-08-30', vote_average: 6.4 },
-      ]);
+      
+      console.log(movies.map(e => e.year))
       setLoading(false);
     }, 800);
+    console.log(movies)
   };
 
   return (
