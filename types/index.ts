@@ -3,6 +3,6 @@ export interface Movie {
   title: string;
   image: string;
   year: string;
-  rating: number;
+  rating: number | { average: number | null };
   summary: string;
 }

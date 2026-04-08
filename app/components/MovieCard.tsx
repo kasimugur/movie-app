@@ -28,7 +28,8 @@ console.log(movie.year)
 
           </span>
         </div>
-          <p className="text-gray-400 text-xs line-clamp-2">{movie.summary?.replace(/<[^>]*>/g, '')}</p>
+          {movie.summary?.replace(/<[^>]*>/g, '') === 'undefined...' ? '': <p className="text-gray-400 text-xs line-clamp-2">{movie.summary?.replace(/<[^>]*>/g, '')}</p>}
+          
       </div>
     </div>
   );

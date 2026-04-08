@@ -9,20 +9,32 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
 
-  
 
+  
+  useEffect(() => {
+    const fetchPopular = async () => {
+      const results = await searchMovies('batman'); 
+      setMovies(results.slice(0, 8)); // İlk 8 tanesini al
+      setLoading(false);
+      setHasSearched(true)
+    };
+    fetchPopular();
+  }, [])
+
+  useEffect(() => {
+    console.log('movies güncellendi:', movies);
+  }, [movies]);
+  
   const handleSearch = async (query: string) => {
     setLoading(true);
     setHasSearched(true);
     const results = await searchMovies(query);
-    console.log(results)
-    setMovies(results)
     setTimeout(() => {
-      
+      setMovies(results)
+
       console.log(movies.map(e => e.year))
       setLoading(false);
     }, 800);
-    console.log(movies)
   };
 
   return (
