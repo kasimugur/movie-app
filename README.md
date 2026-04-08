@@ -3,7 +3,17 @@
 ![CineSearch Banner](./public/banner.png)
 
 CineSearch is a modern **Next.js** application that allows users to explore the world of movies and TV series. Powered by the TVMaze API, it offers real-time data fetching, a seamless user experience, and a highly responsive interface.
+---
 
+## 📍 Table of Contents
+* [🚀 Key Features](#-key-features)
+* [🛠️ Tech Stack](#️-tech-stack)
+* [🎥 Demo & Visuals](#-demo--visuals)
+* [🧪 Testing & Quality Assurance](#-testing--quality-assurance)
+* [📦 Installation & Setup](#-installation--setup)
+* [🔗 Contact](#-contact) 
+  
+---
 ## 🚀 Key Features
 
 - **Dynamic Search:** Search through millions of shows and movies instantly.
@@ -14,16 +24,17 @@ CineSearch is a modern **Next.js** application that allows users to explore the 
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Testing:** [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
 - **API:** [TVMaze API](https://www.tvmaze.com/api)
 
 ## 🎥 Demo & Visuals
-
 ### Live Preview
 ![Demo GIF](./public/assets/movieapp.gif)
+ |---
+[Live link](https://movie-app-liard-tau.vercel.app/)
 
 ### App Screenshots
 | Mobile View | Loading & Skeleton | Search Experience |
@@ -41,7 +52,9 @@ npm test
   - **MovieCard:** Tests for various rating formats and HTML summary stripping logic.
   - **SearchBox:** Verification of form submission and empty search prevention.
   - **Home Page:** Handling of API loading states and data integration.
-
+  ---
+  ![test results ](./public/assets/testresult.png)
+  
 ## 📦 Installation & Setup
 
 Follow these steps to run the project locally:
@@ -68,7 +81,7 @@ Follow these steps to run the project locally:
     Open `http://localhost:3000` in your browser to see the app.
 
 -----
-
-**Developed by Kasım Uğur** [GitHub](https://github.com/kasimugur/) | [LinkedIn](https://www.linkedin.com/in/kasim-ugur/)
+# 🔗 Contact
+**Developed by Kasım Uğur** [GitHub](https://github.com/kasimugur/) | [LinkedIn](https://www.linkedin.com/in/kasimugur/)
 
 
