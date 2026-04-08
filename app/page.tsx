@@ -21,9 +21,7 @@ export default function Home() {
     fetchPopular();
   }, [])
 
-  useEffect(() => {
-    console.log('movies güncellendi:', movies);
-  }, [movies]);
+
   
   const handleSearch = async (query: string) => {
     setLoading(true);
@@ -31,8 +29,6 @@ export default function Home() {
     const results = await searchMovies(query);
     setTimeout(() => {
       setMovies(results)
-
-      console.log(movies.map(e => e.year))
       setLoading(false);
     }, 800);
   };

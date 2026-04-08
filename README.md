@@ -1,37 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 CineSearch - Movie Discovery App
 
-## Getting Started
+![CineSearch Banner](./public/banner.png)
 
-First, run the development server:
+CineSearch is a modern **Next.js** application that allows users to explore the world of movies and TV series. Powered by the TVMaze API, it offers real-time data fetching, a seamless user experience, and a highly responsive interface.
+
+## 🚀 Key Features
+
+- **Dynamic Search:** Search through millions of shows and movies instantly.
+- **Featured Content:** Automatically populated discovery area on the home page.
+- **Modern UI/UX:** Built with Tailwind CSS, offering a fully responsive design for all devices.
+- **Advanced Data Handling:** Secure management of complex API data (rating formatting, HTML summary sanitization, etc.).
+- **Comprehensive Testing:** Critical components verified using Jest and React Testing Library.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Testing:** [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
+- **API:** [TVMaze API](https://www.tvmaze.com/api)
+
+## 🎥 Demo & Visuals
+
+### Live Preview
+![Demo GIF](./public/assets/movieapp.gif)
+
+### App Screenshots
+| Mobile View | Loading & Skeleton | Search Experience |
+|---|---|---|
+| ![Mobile](./public/assets/mobile.png) | ![Loading](./public/assets/loading.png) ![Skeleton](./public/assets/skeleton.png)  | ![Search](./public/assets/search.png) |
+
+## 🧪 Testing & Quality Assurance
+
+To ensure logical correctness and a bug-free experience, the following areas are covered with unit and integration tests:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm test
+````
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - **MovieCard:** Tests for various rating formats and HTML summary stripping logic.
+  - **SearchBox:** Verification of form submission and empty search prevention.
+  - **Home Page:** Handling of API loading states and data integration.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Follow these steps to run the project locally:
 
-## Learn More
+1.  **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone [https://github.com/kasimugur/movie-app.git](https://github.com/kasimugur/movie-app.git)
+    cd movie-app
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Start the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# movie-app
+    Open `http://localhost:3000` in your browser to see the app.
+
+-----
+
+**Developed by Kasım Uğur** [GitHub](https://github.com/kasimugur/) | [LinkedIn](https://www.linkedin.com/in/kasim-ugur/)
+
+

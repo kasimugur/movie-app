@@ -84,7 +84,7 @@ describe('Home Page', () => {
   });
 
   it('arama sırasında loading spinner gösterir', async () => {
-    // Söz vermeyi (promise) manuel kontrol ediyoruz
+    
     let resolveSearch: any;
     const searchPromise = new Promise((resolve) => {
       resolveSearch = resolve;
@@ -96,7 +96,7 @@ describe('Home Page', () => {
     const button = screen.getByRole('button', { name: /search batman/i });
     await userEvent.click(button);
 
-    // Spinner orada olmalı
+    
     expect(document.querySelector('.animate-spin')).toBeInTheDocument();
 
     // Testi bitirmek için promise'i çözüyoruz

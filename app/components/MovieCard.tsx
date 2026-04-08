@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 export default function MovieCard({ movie }: { movie: Movie }) {
   const imageUrl = movie.image
-console.log(movie.year)
   return (
     <div className="group relative overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
       <div className="relative h-96 w-full">
